@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100b08">
+
+<title>Happy Dhanteras | Golden Prosperity</title>
+
+  <!-- Open Graph Meta Tags (यह लिंक शेयर करने पर फोटो और विवरण दिखाने के लिए जरूरी हैं) -->
+  <meta property="og:title" content="Happy Dhanteras | Golden Prosperity" />
+  <meta property="og:description" content="Happy Dhanteras" />
+  <meta property="og:image" content="https://share.google/2gVsAH60HDO3g4QFh" />
+  <meta property="og:url" content="https://dhanteras2026.vercel.app" />
+  <meta property="og:type" content="website" />
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --gold:#ffd66b;
+  --orange:#e99532;
+  --dark:#100b08;
+  --cream:#fff3d0;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html { scroll-behavior:smooth; }
+
+body {
+  background:var(--dark);
+  color:white;
+  font-family:Poppins,sans-serif;
+  overflow-x:hidden;
+}
+
+#effects {
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:5;
+}
+
+nav {
+  position:relative;
+  z-index:10;
+  padding:20px 8%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #ffffff17;
+  background:#100b08d9;
+  backdrop-filter:blur(15px);
+}
+
+.logo {
+  color:var(--gold);
+  font-family:Cinzel,serif;
+  font-size:23px;
+  font-weight:800;
+}
+
+nav a {
+  color:white;
+  text-decoration:none;
+  margin-left:22px;
+  font-size:13px;
+  transition:.3s;
+}
+
+nav a:hover { color:var(--gold); }
+
+.hero {
+  min-height:90vh;
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:70px 20px;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 50% 50%,#a65c1733,transparent 60%),
+    radial-gradient(circle at 10% 10%,#ffb52a15,transparent 35%);
+}
+
+.tag {
+  color:var(--gold);
+  letter-spacing:5px;
+  font-size:12px;
+  margin-bottom:24px;
+  animation:up 1s both;
+}
+
+h1 {
+  font-family:Cinzel,serif;
+  font-size:clamp(42px,9vw,100px);
+  line-height:1.2;
+  background:linear-gradient(
+    120deg,#fff5c7,#e9a52d,#fff0a4,#d77a21
+  );
+  background-size:250% auto;
+  color:transparent;
+  -webkit-background-clip:text;
+  filter:drop-shadow(0 0 22px #e9a52d45);
+  animation:goldShine 5s linear infinite,up 1s both;
+}
+
+.subtitle {
+  color:#f2d7aa;
+  margin-top:20px;
+  letter-spacing:2px;
+  font-size:clamp(12px,2vw,17px);
+}
+
+.recipient {
+  margin-top:28px;
+  color:var(--gold);
+  font-family:Cinzel,serif;
+  font-size:23px;
+}
+
+.message {
+  max-width:630px;
+  color:#d8c4a9;
+  font-size:14px;
+  line-height:1.9;
+  margin-top:15px;
+}
+
+.buttons {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+  margin-top:32px;
+}
+
+.btn {
+  border:1px solid var(--gold);
+  border-radius:40px;
+  padding:14px 25px;
+  cursor:pointer;
+  font-family:inherit;
+  font-weight:600;
+  color:#241508;
+  background:linear-gradient(120deg,#ffe18b,#db9027);
+  box-shadow:0 0 25px #e9a52d35;
+  transition:.3s;
+}
+
+.btn:hover {
+  transform:translateY(-5px);
+  box-shadow:0 0 35px #e9a52d75;
+}
+
+.btn.outline {
+  color:var(--gold);
+  background:transparent;
+}
+
+.decorations {
+  display:flex;
+  align-items:center;
+  gap:55px;
+  margin-top:85px;
+}
+
+.diya {
+  position:relative;
+  width:65px;
+  height:32px;
+  background:linear-gradient(#ffe39c,#b85e17);
+  border-radius:5px 5px 50% 50%;
+  box-shadow:0 12px 35px #ffad3350;
+}
+
+.diya:before {
+  content:"";
+  position:absolute;
+  top:-37px;
+  left:50%;
+  transform:translateX(-50%);
+  width:18px;
+  height:35px;
+  border-radius:50%;
+  background:radial-gradient(
+    ellipse,#fff9c0,#ffbb35 55%,#ff5b13
+  );
+  filter:drop-shadow(0 0 15px #ffb62e);
+  animation:flame .6s infinite alternate;
+}
+
+@keyframes flame {
+  from {transform:translateX(-50%) rotate(-7deg) scale(.9);}
+  to {transform:translateX(-50%) rotate(7deg) scale(1.1);}
+}
+
+@keyframes goldShine {
+  to {background-position:250% center;}
+}
+
+@keyframes up {
+  from {opacity:0;transform:translateY(25px);}
+  to {opacity:1;transform:translateY(0);}
+}
+
+/* GOLD COINS */
+
+.coins {
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+
+.coin {
+  position:absolute;
+  top:-60px;
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:#8a4b0b;
+  font-weight:800;
+  font-size:13px;
+  background:radial-gradient(circle,#fff0a1,#e7a52b,#9b5c10);
+  border:2px solid #ffe59a;
+  box-shadow:0 0 15px #ffbb3370;
+  animation:fall linear infinite;
+}
+
+@keyframes fall {
+  to {transform:translateY(110vh) rotate(720deg);}
+}
+
+/* SECTIONS */
+
+section:not(.hero) {
+  position:relative;
+  z-index:2;
+  padding:85px 8%;
+  text-align:center;
+}
+
+.title {
+  font-family:Cinzel,serif;
+  font-size:clamp(28px,5vw,45px);
+  color:var(--gold);
+  margin-bottom:20px;
+}
+
+.description {
+  color:#cdbba5;
+  font-size:14px;
+  line-height:1.9;
+  max-width:680px;
+  margin:auto;
+}
+
+.cards {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  margin-top:45px;
+}
+
+.card {
+  padding:35px 20px;
+  border-radius:18px;
+  background:linear-gradient(145deg,#ffffff12,#ffffff04);
+  border:1px solid #ffd36a35;
+  transition:.35s;
+}
+
+.card:hover {
+  transform:translateY(-9px);
+  border-color:var(--gold);
+}
+
+.card .emoji {
+  font-size:42px;
+  margin-bottom:17px;
+}
+
+.card h3 {
+  font-family:Cinzel,serif;
+  color:var(--gold);
+  margin-bottom:12px;
+}
+
+.card p {
+  color:#cdbba5;
+  font-size:13px;
+  line-height:1.8;
+}
+
+/* PERSONAL GREETING */
+
+.generator {
+  max-width:570px;
+  margin:35px auto;
+  padding:30px;
+  border-radius:20px;
+  border:1px solid #ffd36a45;
+  background:#ffffff09;
+}
+
+.generator input {
+  width:100%;
+  padding:14px;
+  margin:15px 0;
+  color:white;
+  border:1px solid #ffd36a65;
+  border-radius:10px;
+  outline:none;
+  background:#ffffff0d;
+  font-family:inherit;
+}
+
+.generator input:focus {
+  border-color:var(--gold);
+}
+
+/* BUSINESS */
+
+.business {
+  background:linear-gradient(135deg,#9e5b1518,#ffffff03);
+  border-top:1px solid #ffffff14;
+  border-bottom:1px solid #ffffff14;
+}
+
+/* FOOTER */
+
+footer {
+  position:relative;
+  z-index:2;
+  padding:35px 15px;
+  text-align:center;
+  color:#bba78e;
+  font-size:12px;
+}
+
+footer span {color:var(--gold);}
+
+#toast {
+  position:fixed;
+  z-index:20;
+  bottom:25px;
+  left:50%;
+  transform:translate(-50%,100px);
+  background:var(--gold);
+  color:#241508;
+  padding:13px 25px;
+  border-radius:30px;
+  font-size:13px;
+  transition:.3s;
+}
+
+#toast.show {
+  transform:translate(-50%,0);
+}
+
+@media(max-width:700px) {
+  nav {padding:17px 5%;}
+  nav a {margin-left:8px;font-size:10px;}
+  .cards {grid-template-columns:1fr;}
+  section:not(.hero) {padding:65px 6%;}
+  .decorations {gap:35px;}
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    animation:none !important;
+    transition:none !important;
+    scroll-behavior:auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="effects"></canvas>
+
+<nav>
+  <div class="logo">✦ DHANOTSAV</div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#meaning">About</a>
+    <a href="#greeting">Greeting</a>
+  </div>
+</nav>
+
+<main>
+
+<section class="hero" id="home">
+
+  <div class="coins" id="coins"></div>
+
+  <div class="tag">✦ FESTIVAL OF WEALTH & PROSPERITY ✦</div>
+
+  <h1>Happy<br>Dhanteras</h1>
+
+  <p class="subtitle">
+    MAY YOUR LIFE SHINE WITH GOLDEN HAPPINESS
+  </p>
+
+  <div class="recipient" id="recipient">
+    Dear Friends & Family ✨
+  </div>
+
+  <p class="message">
+    May Goddess Lakshmi bless your home with prosperity,
+    Lord Dhanvantari bless you with good health,
+    and may your life be filled with happiness,
+    success and endless opportunities.
+  </p>
+
+  <div class="buttons">
+    <button class="btn" onclick="shareGreeting()">
+      ✨ Share Greeting
+    </button>
+
+    <button class="btn outline" onclick="celebrate()">
+      ✦ Celebrate Now
+    </button>
+  </div>
+
+  <div class="decorations">
+    <div class="diya"></div>
+    <div class="diya"></div>
+    <div class="diya"></div>
+  </div>
+
+</section>
+
+<section id="meaning">
+
+  <h2 class="title">The Spirit of Dhanteras</h2>
+
+  <p class="description">
+    Dhanteras is a celebration of wealth, health,
+    prosperity and new beginnings. Let us welcome
+    happiness and positivity into every home.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="emoji">🪙</div>
+      <h3>Wealth</h3>
+      <p>May your efforts bring success, prosperity and abundance.</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🌿</div>
+      <h3>Good Health</h3>
+      <p>May every day bring wellness, peace and happiness.</p>
+    </div>
+
+    <div class="card">
+      <div class="emoji">🪔</div>
+      <h3>New Beginnings</h3>
+      <p>May your future shine with fresh opportunities.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="greeting">
+
+  <h2 class="title">Create Your Greeting</h2>
+
+  <p class="description">
+    Enter a name and create a personalised Dhanteras greeting.
+  </p>
+
+  <div class="generator">
+
+    <input
+      type="text"
+      id="personName"
+      placeholder="Enter recipient's name"
+      maxlength="40"
+    >
+
+    <button class="btn" onclick="createGreeting()">
+      Create Greeting ✨
+    </button>
+
+    <div class="buttons">
+      <button class="btn outline" onclick="shareGreeting()">
+        Share
+      </button>
+
+      <button class="btn outline" onclick="copyLink()">
+        Copy Link
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="business" id="business">
+
+  <h2 class="title">Business & Collaborations</h2>
+
+  <p class="description">
+    Give your brand a golden festive identity.
+    We create creative digital greetings,
+    customised festival websites and branded
+    celebration experiences for businesses.
+  </p>
+
+  <div class="buttons">
+    <a href="mailto:anshubca2025@gmail.com"
+       style="text-decoration:none">
+      <button class="btn">Contact for Collaboration</button>
+    </a>
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  Made with <span>Anshu</span> 
+  <br><br>
+  DHANOTSAV © 2026 | Happy Dhanteras
+</footer>
+
+<div id="toast"></div>
+
+<script>
+
+// PERSONAL GREETING
+
+function createGreeting() {
+
+  const name = document
+    .getElementById("personName")
+    .value.trim();
+
+  if (!name) {
+    showToast("Please enter a name!");
+    return;
+  }
+
+  document.getElementById("recipient").textContent =
+    "Dear " + name + " ✨";
+
+  const url = new URL(window.location.href);
+  url.searchParams.set("to", name);
+
+  history.replaceState(null, "", url.toString());
+
+  showToast("Your greeting is ready!");
+}
+
+// LOAD RECIPIENT FROM LINK
+
+const params = new URLSearchParams(window.location.search);
+const receiver = params.get("to");
+
+if (receiver) {
+  document.getElementById("recipient").textContent =
+    "Dear " + receiver + " ✨";
+}
+
+// SHARE GREETING
+
+async function shareGreeting() {
+
+  const shareData = {
+    title: "Happy Dhanteras ✨",
+    text: "May your life be filled with wealth, health and happiness!",
+    url: window.location.href
+  };
+
+  try {
+    if (navigator.share) {
+      await navigator.share(shareData);
+    } else {
+      await copyLink();
+    }
+  } catch (error) {
+    if (error.name !== "AbortError") {
+      showToast("Unable to share. Please copy the link.");
+    }
+  }
+}
+
+// COPY LINK
+
+async function copyLink() {
+
+  try {
+    await navigator.clipboard.writeText(window.location.href);
+    showToast("Greeting link copied!");
+  } catch (error) {
+    showToast("Please copy the browser link manually.");
+  }
+
+}
+
+// TOAST MESSAGE
+
+function showToast(message) {
+
+  const toast = document.getElementById("toast");
+
+  toast.textContent = message;
+  toast.classList.add("show");
+
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2500);
+
+}
+
+// GOLDEN COIN ANIMATION
+
+const coinBox = document.getElementById("coins");
+
+if (!window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches) {
+
+  for (let i = 0; i < 18; i++) {
+
+    const coin = document.createElement("div");
+
+    coin.className = "coin";
+    coin.textContent = "₹";
+
+    coin.style.left = Math.random() * 100 + "%";
+    coin.style.animationDuration =
+      (5 + Math.random() * 7) + "s";
+
+    coin.style.animationDelay =
+      (-Math.random() * 10) + "s";
+
+    coinBox.appendChild(coin);
+  }
+
+}
+
+// FIREWORKS CANVAS
+
+const canvas = document.getElementById("effects");
+const ctx = canvas.getContext("2d");
+
+let particles = [];
+let width, height;
+
+function resizeCanvas() {
+
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+  width = window.innerWidth;
+  height = window.innerHeight;
+
+  canvas.width = width * dpr;
+  canvas.height = height * dpr;
+
+  canvas.style.width = width + "px";
+  canvas.style.height = height + "px";
+
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+}
+
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+function firework(x, y) {
+
+  const colors = [
+    "#ffd66b",
+    "#ff9b35",
+    "#fff1b0",
+    "#e7b8ff"
+  ];
+
+  for (let i = 0; i < 55; i++) {
+
+    const angle = Math.random() * Math.PI * 2;
+    const speed = Math.random() * 4 + 1;
+
+    particles.push({
+      x, y,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed,
+      life: 1,
+      size: Math.random() * 3 + 1,
+      color: colors[
+        Math.floor(Math.random() * colors.length)
+      ]
+    });
+
+  }
+
+}
+
+// CELEBRATE BUTTON
+
+function celebrate() {
+
+  if (window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches) {
+    showToast("Happy Dhanteras!");
+    return;
+  }
+
+  firework(
+    width * 0.5,
+    height * 0.35
+  );
+
+  firework(
+    width * 0.25,
+    height * 0.4
+  );
+
+  firework(
+    width * 0.75,
+    height * 0.4
+  );
+
+  showToast("Happy Dhanteras! 🪔");
+}
+
+// ANIMATION LOOP
+
+function animate() {
+
+  ctx.clearRect(0, 0, width, height);
+
+  particles.forEach((p, i) => {
+
+    p.x += p.vx;
+    p.y += p.vy;
+
+    p.vy += 0.035;
+    p.life -= 0.015;
+
+    ctx.globalAlpha = Math.max(0, p.life);
+    ctx.fillStyle = p.color;
+
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+    ctx.fill();
+
+    if (p.life <= 0) {
+      particles.splice(i, 1);
+    }
+
+  });
+
+  ctx.globalAlpha = 1;
+
+  requestAnimationFrame(animate);
+}
+
+if (!window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches) {
+
+  animate();
+
+  setInterval(() => {
+    firework(
+      Math.random() * width,
+      Math.random() * height * 0.5
+    );
+  }, 2500);
+
+}
+
+// CLICK EFFECT
+
+canvas.addEventListener("click", event => {
+  firework(event.clientX, event.clientY);
+});
+
+</script>
+
+</body>
+</html>
